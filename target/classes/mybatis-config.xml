@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!--引入properties文件,可以更具key获取value值如${mysql_driver},也可以使用property子元素来配置-->
+    <properties resource="mysql-config.properties">
+        <!--配置完属性，就可以在上下文中使用name来引用值如${mysql_driver}
+        引入了properties文件就可以省去属性的配置
+        -->
+        <!--<property name="mysql_driver" value="com.mysql.jdbc.Driver"/>-->
+        <!--<property name="mysql_url"  value="jdbc:mysql:jdbc:mysql://localhost:3306/study?useUnicode=true&amp;characterEncoding=UTF-8"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="xwf123"/>-->
+
+    </properties>
+
+    <typeAliases>
+        <typeAlias type="mybatis.study.Goods" alias="Goods"/>
+        <typeAlias type="mybatis.study.User" alias="User"/>
+    </typeAliases>
+
+
+    <!--<typeAliases>-->
+        <!--<typeAlias type="mybatis.study.User" alias="user"/>-->
+    <!--</typeAliases>-->
+    <environments default="development">
+        <environment id="development">
+
+            <!--采用jdbc事务管理器-->
+            <transactionManager type="JDBC"/>
+
+            <!--配置数据连接池-->
+            <dataSource type="POOLED">
+
+                <!--使用属性文件配置-->
+                <property name="driver" value="${mysql_driver}"/>
+                <property name="url" value="${mysql_url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--配置映射类或文件-->
+    <mappers>
+        <!--在pom.xml中一配置资源目录这里直接写即可-->
+        <mapper resource="UserMapper.xml"/>
+        <!--使用了注解的interface可以指定class，没有的需要提供实现文件-->
+        <mapper class="mybatis.study.HqUserMapper"/>
+        <mapper resource="GoodsMapper.xml"></mapper>
+    </mappers>
+
+</configuration>
