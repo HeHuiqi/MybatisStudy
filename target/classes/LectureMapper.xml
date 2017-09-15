@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--学校所有的课程表-->
+<mapper namespace="mybatis.study.HqMapper.LectureMapper">
+
+    <resultMap id="lectureMap" type="mybatis.study.Model.Lecture">
+        <id property="id" column="id"/>
+        <result property="lectureName" column="lecture_name"/>
+        <result property="note" column="note"/>
+
+    </resultMap>
+
+    <select id="getLecture" parameterType="int" resultMap="lectureMap">
+        SELECT id,lecture_name,note FROM t_lecture WHERE id = #{lectureId}
+    </select>
+
+</mapper>

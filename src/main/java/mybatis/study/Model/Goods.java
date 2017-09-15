@@ -1,4 +1,4 @@
-package mybatis.study;
+package mybatis.study.Model;
 
 public class Goods {
     private long goodsId;

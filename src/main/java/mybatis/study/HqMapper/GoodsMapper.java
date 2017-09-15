@@ -1,6 +1,6 @@
 package mybatis.study.HqMapper;
 
-import mybatis.study.Goods;
+import mybatis.study.Model.Goods;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

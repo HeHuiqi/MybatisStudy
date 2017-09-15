@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--学生证表-->
+<mapper namespace="mybatis.study.HqMapper.StudentSelfCardMapper">
+
+    <resultMap id="studentCardMap" type="mybatis.study.Model.StudentSelfCard">
+        <id property="id" column="id"/>
+        <result property="studentId" column="student_id"/>
+        <result property="stnative" column="native"/>
+        <result property="issueDate" column="issue_date"/>
+        <result property="endDate" column="end_date"/>
+        <result property="note" column="note"/>
+    </resultMap>
+
+    <sql id="studentCardColumns">
+        id,student_id,native,issue_date,end_date,note
+    </sql>
+    <select id="findStudentSelfCardByStudentId" parameterType="int" resultMap="studentCardMap" >
+
+        SELECT<include refid="studentCardColumns"/> FROM t_student_selfcard WHERE  student_id = #{studentId}
+
+    </select>
+
+</mapper>

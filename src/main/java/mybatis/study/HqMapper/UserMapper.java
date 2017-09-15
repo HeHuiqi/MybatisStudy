@@ -1,6 +1,6 @@
 package mybatis.study.HqMapper;
 
-import mybatis.study.User;
+import mybatis.study.Model.User;
 
 import java.util.List;
 

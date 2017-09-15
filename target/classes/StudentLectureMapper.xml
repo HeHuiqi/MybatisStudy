@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--学生选择的课程成绩表-->
+<mapper namespace="mybatis.study.HqMapper.StudentLectureMapper">
+<resultMap id="studentLectureMap" type="mybatis.study.Model.StudentLecture">
+
+    <id property="id" column="id"/>
+    <result property="studentId" column="student_id"/>
+    <result property="grade" column="grade"/>
+    <result property="note" column="note"/>
+
+    <!--学生选择学习的课程的一个成绩对应一门课程,这里的column="lecture_id"，lecture_id作为参数传入getLecture中-->
+    <association property="lecture" column="lecture_id" select="mybatis.study.HqMapper.LectureMapper.getLecture"/>
+</resultMap>
+    
+    <select id="findStudentLectureByStudentId" parameterType="int" resultMap="studentLectureMap">
+
+        SELECT  id,student_id,lecture_id,grade,note FROM t_student_lecture WHERE student_id = #{studentId}
+
+    </select>
+
+</mapper>

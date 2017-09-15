@@ -1,4 +1,4 @@
-package mybatis.study;
+package mybatis.study.Model;
 
 public class User {
     private  long userId;

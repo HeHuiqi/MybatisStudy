@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mybatis.study.HqMapper.StudentHealthFemaleMapper">
+
+
+    <resultMap id="femaleHealthMap" type="mybatis.study.Model.StudentHealthFemale">
+        <id property="id" column="id"/>
+        <result property="checkDate" column="check_date"/>
+
+        <result property="heart" column="heart"/>
+        <result property="liver" column="liver"/>
+        <result property="spleen" column="spleen"/>
+        <result property="lung" column="lung"/>
+
+        <result property="kidney" column="kidney"/>
+        <result property="uterus" column="uterus"/>
+        <result property="note" column="note"/>
+
+    </resultMap>
+    
+    <select id="getFemaleStudentHealth" parameterType="int" resultMap="femaleHealthMap">
+        SELECT * FROM t_student_health_female WHERE student_id  = #{studentId}
+    </select>
+
+</mapper>

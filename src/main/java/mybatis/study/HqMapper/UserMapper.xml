@@ -17,7 +17,7 @@ namespace的值习惯上设置成包名+sql映射文件名，
   User类就是users表所对应的实体类
   -->
 
-    <select id="getUser" parameterType="mybatis.study.User" resultType="mybatis.study.User">
+    <select id="getUser" parameterType="mybatis.study.Model.User" resultType="mybatis.study.Model.User">
         SELECT * FROM  User WHERE userId = #{userId}
     </select>
 
@@ -26,16 +26,16 @@ namespace的值习惯上设置成包名+sql映射文件名，
         SELECT * FROM User;
     </select>
 
-    <insert id="insertUser" parameterType="mybatis.study.User">
+    <insert id="insertUser" parameterType="mybatis.study.Model.User">
         INSERT INTO User (userId,username) VALUES (#{userId},#{username})
     </insert>
 
-    <update id="updateUser" parameterType="mybatis.study.User">
+    <update id="updateUser" parameterType="mybatis.study.Model.User">
         update user set username = #{username}, password = #{password}
         where userId = #{userId};
     </update>
 
-    <update id="deleteUser" parameterType="mybatis.study.User">
+    <update id="deleteUser" parameterType="mybatis.study.Model.User">
         DELETE FROM User WHERE userId = #{userId};
     </update>
 

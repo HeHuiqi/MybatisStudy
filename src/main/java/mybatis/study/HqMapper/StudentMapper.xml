@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--学生表-->
+<mapper namespace="mybatis.study.HqMapper.StudentMapper">
+
+    <resultMap id="studentMap" type="mybatis.study.Model.Student">
+
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="sex" column="sex"/>
+        <result property="note" column="note"/>
+        <!--学生和学生证之间是一对一关系 lazy延时加载，-->
+        <association  fetchType="lazy" property="studentSelfCard" column="id" select="mybatis.study.HqMapper.StudentSelfCardMapper.findStudentSelfCardByStudentId"/>
+
+        <!--学生和所学习的课程一对多的关系，一个学生可以选择学习多门课程,eager即时加载会覆盖全局设置-->
+        <collection fetchType="eager" property="studentLectureList" column="id" select="mybatis.study.HqMapper.StudentLectureMapper.findStudentLectureByStudentId"/>
+
+        <!--鉴别器关联-->
+        <discriminator javaType="int" column="sex">
+            <case value="1" resultMap="maleStudentMap"/>
+            <case value="0" resultMap="femaleStudentMap"/>
+        </discriminator>
+        
+    </resultMap>
+
+    <select id="getStudent" parameterType="int" resultMap="studentMap">
+        SELECT id,name,sex,note FROM t_student WHERE id = #{studentId}
+    </select>
+
+    <resultMap id="maleStudentMap" type="mybatis.study.Model.MaleStudent" extends="studentMap">
+        <collection property="maleList" column="id" select="mybatis.study.HqMapper.StudentHealthMaleMapper.getFemaleStudentHealth"/>
+    </resultMap>
+
+    <resultMap id="femaleStudentMap" type="mybatis.study.Model.FemaleStudent" extends="studentMap">
+        <collection property="femaleList" column="id" select="mybatis.study.HqMapper.StudentHealthFemaleMapper.getFemaleStudentHealth"/>
+    </resultMap>
+
+
+
+
+</mapper>

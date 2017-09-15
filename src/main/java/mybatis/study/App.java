@@ -1,7 +1,10 @@
 package mybatis.study;
 
-import mybatis.study.HqMapper.GoodsMapper;
-import mybatis.study.HqMapper.UserMapper;
+import mybatis.study.HqMapper.*;
+import mybatis.study.Model.Goods;
+import mybatis.study.Model.Lecture;
+import mybatis.study.Model.Student;
+import mybatis.study.Model.StudentHealthMale;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.List;
@@ -62,13 +65,13 @@ public class App {
 //        userMapper.deleteUser(insetUser);
 
 
-            Goods goods = new Goods();
-            goods.setGoodsId(3);
-            goods.setGoodsName("辣条");
-            goods.setGoodsPrice((float) 1.5);
-            GoodsMapper goodsMapper = session.getMapper(GoodsMapper.class);
-           List<Goods> goodsList =  goodsMapper.findAllGoods();
-           System.out.println("goodsList=="+goodsList);
+//            Goods goods = new Goods();
+//            goods.setGoodsId(3);
+//            goods.setGoodsName("辣条");
+//            goods.setGoodsPrice((float) 1.5);
+//            GoodsMapper goodsMapper = session.getMapper(GoodsMapper.class);
+//           List<Goods> goodsList =  goodsMapper.findAllGoods();
+//           System.out.println("goodsList=="+goodsList);
 
 //            int result = goodsMapper.insertGoods(goods);
 //            System.out.println("insertGoods=="+result);
@@ -83,6 +86,22 @@ public class App {
 //            System.out.println("findOneGoods=="+goods);
 
 
+//            LectureMapper lectureMapper = session.getMapper(LectureMapper.class);
+//            Lecture lecture = lectureMapper.getLecture(1);
+//            System.out.println("lecture=="+lecture);
+
+            StudentMapper studentMapper = session.getMapper(StudentMapper.class);
+            Student student = studentMapper.getStudent(2);
+            System.out.println("student=="+student);
+
+//            System.out.println("getStudentSelfCard=="+student.getStudentSelfCard());
+//            System.out.println("getStudentLectureList=="+student.getStudentLectureList());
+
+//            StudentHealthFemaleMapper femaleMapper = session.getMapper(StudentHealthFemaleMapper.class);
+//            System.out.println("female==="+femaleMapper.getFemaleStudentHealth(2));
+//
+//            StudentHealthMaleMapper maleMapper = session.getMapper(StudentHealthMaleMapper.class);
+//            System.out.println("male==="+maleMapper.getMaleStudentHealth(1));
 
             //插入、更新、删除之后必须做commit操作，不然数据不会入库
             session.commit();
@@ -97,7 +116,6 @@ public class App {
             //关闭session
             session.close();
         }
-
 
 
     }
