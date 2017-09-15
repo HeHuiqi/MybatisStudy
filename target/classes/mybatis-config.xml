@@ -19,11 +19,12 @@
     </properties>
 
     <!--设置必须在properties后边-->
-    <!--<settings>-->
-        <!--&lt;!&ndash;设置延迟加载&ndash;&gt;-->
-        <!--<setting name="lazyLoadingEnabled" value="true"/>-->
-        <!--<setting name="aggressiveLazyLoading" value="false"/>-->
-    <!--</settings>-->
+    <settings>
+        <!--设置延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--设置延迟加载false：按需加载（先加载主要信息，在加载次要信息） true：按层加载（先查询其他信息，再查询主要信息）-->
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
 
     <typeAliases>
         <typeAlias type="mybatis.study.Model.Goods" alias="Goods"/>
