@@ -28,7 +28,7 @@ public class MybaitsSqlSessionFactory {
         pooledDataSource.setDriver("com.mysql.jdbc.Driver");
         pooledDataSource.setUrl("jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=UTF-8");
         pooledDataSource.setUsername("root");
-        pooledDataSource.setPassword("xwf123");
+        pooledDataSource.setPassword("h12345678");
 
         //事务管理
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
@@ -50,7 +50,7 @@ public class MybaitsSqlSessionFactory {
                 }
             }
         }
-//        System.out.println("sqlSessionFactory=="+sqlSessionFactory);
+        System.out.println("sqlSessionFactory=="+sqlSessionFactory);
 
         return sqlSessionFactory;
     }
@@ -86,7 +86,7 @@ public class MybaitsSqlSessionFactory {
                 }
             }
         }
-//        System.out.println("sqlSessionFactory=="+sqlSessionFactory);
+        System.out.println("xml_sqlSessionFactory=="+sqlSessionFactory);
 
         return sqlSessionFactory;
 
@@ -97,6 +97,7 @@ public class MybaitsSqlSessionFactory {
         if (sqlSessionFactory == null){
 
             getXmlSqlSessionFactory();
+//            getSqlSessionFactory();
         }
         return sqlSessionFactory.openSession();
     }
