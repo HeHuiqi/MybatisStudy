@@ -22,22 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86b531b4-a826-417b-b9e7-5b9f7a16466b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dbsource/study.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_20.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MybatisStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MybatisStudy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/study/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybatis/study/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybatis/study/MybaitsSqlSessionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybatis/study/MybaitsSqlSessionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mysql-config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mysql-config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/study/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/study/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/study/MybaitsSqlSessionFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/study/MybaitsSqlSessionFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mysql-config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mysql-config.properties" afterDir="false" />
-    </list>
+    <list default="true" id="86b531b4-a826-417b-b9e7-5b9f7a16466b" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -198,22 +183,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1358" height="340" key="GridCell.Tab.0.bottom" timestamp="1655109655044">
+    <state width="1358" height="340" key="GridCell.Tab.0.bottom" timestamp="1655109854411">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="340" key="GridCell.Tab.0.bottom/0.25.1680.936@0.25.1680.936" timestamp="1655109655044" />
-    <state width="1358" height="340" key="GridCell.Tab.0.center" timestamp="1655109655043">
+    <state width="1358" height="340" key="GridCell.Tab.0.bottom/0.25.1680.936@0.25.1680.936" timestamp="1655109854411" />
+    <state width="1358" height="340" key="GridCell.Tab.0.center" timestamp="1655109854410">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="340" key="GridCell.Tab.0.center/0.25.1680.936@0.25.1680.936" timestamp="1655109655043" />
-    <state width="1358" height="340" key="GridCell.Tab.0.left" timestamp="1655109655041">
+    <state width="1358" height="340" key="GridCell.Tab.0.center/0.25.1680.936@0.25.1680.936" timestamp="1655109854410" />
+    <state width="1358" height="340" key="GridCell.Tab.0.left" timestamp="1655109854410">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="340" key="GridCell.Tab.0.left/0.25.1680.936@0.25.1680.936" timestamp="1655109655041" />
-    <state width="1358" height="340" key="GridCell.Tab.0.right" timestamp="1655109655043">
+    <state width="1358" height="340" key="GridCell.Tab.0.left/0.25.1680.936@0.25.1680.936" timestamp="1655109854410" />
+    <state width="1358" height="340" key="GridCell.Tab.0.right" timestamp="1655109854411">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
-    <state width="1358" height="340" key="GridCell.Tab.0.right/0.25.1680.936@0.25.1680.936" timestamp="1655109655043" />
+    <state width="1358" height="340" key="GridCell.Tab.0.right/0.25.1680.936@0.25.1680.936" timestamp="1655109854411" />
     <state x="378" y="153" key="Maven.ArtifactSearchDialog" timestamp="1655091299481">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
